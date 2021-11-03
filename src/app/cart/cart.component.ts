@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { JsonService } from "../json.service";
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  items: Array<JSON> = [];
+
+  constructor(private json: JsonService) {
+    json.getData('assets/json/cart.json').subscribe(result => {
+      this.items = result;
+      console.log(this.items);
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  getItems(): any {
+    return this.items;
   }
 
 }

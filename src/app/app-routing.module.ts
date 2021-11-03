@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { CartComponent } from './cart/cart.component';
 
-
+// defines all available routes, path specifies the directory path relative to the current directory
 const routes: Routes = [
-  {path: '', component: LandingComponent},
-  {path: 'cart', component: CartComponent},
+  {path: 'test', component: LandingComponent},
+  {path: '', component: CartComponent},
 ];
 
 @NgModule({
