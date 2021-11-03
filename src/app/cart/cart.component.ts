@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { JsonService } from "../json.service";
+import { Tour } from "../types/tour";
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { JsonService } from "../json.service";
 })
 export class CartComponent implements OnInit {
 
-  items: Array<JSON> = [];
+  items: Tour[] = [];
 
   constructor(private json: JsonService) {
     json.getData('assets/json/cart.json').subscribe(result => {

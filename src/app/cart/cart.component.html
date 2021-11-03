@@ -1,0 +1,11 @@
+<div *ngIf="items">
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="items">
+                <li *ngFor="let item of items; let i = index">
+                    {{item.tour}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
