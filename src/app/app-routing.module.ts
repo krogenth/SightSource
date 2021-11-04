@@ -5,8 +5,8 @@ import { CartComponent } from './cart/cart.component';
 
 // defines all available routes, path specifies the directory path relative to the current directory
 const routes: Routes = [
-  {path: 'test', component: LandingComponent},
-  {path: '', component: CartComponent},
+  {path: '', component: LandingComponent},
+  {path: 'cart', component: CartComponent},
 ];
 
 @NgModule({
