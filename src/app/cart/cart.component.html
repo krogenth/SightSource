@@ -1,11 +1,41 @@
-<div *ngIf="items">
-    <div class="container-fluid">
-        <div class="row">
-            <ul class="items">
-                <li *ngFor="let item of items; let i = index">
-                    {{item.tour}}
-                </li>
-            </ul>
+<div class="cart-body" *ngIf="items">
+    <div class="cart-item-card" *ngFor="let item of items; let i = index">
+        <div class="cart-item-card-img">
+            <img src={{item.img}} />
+        </div>
+        <div class="cart-item-card-info">
+            <h3>
+                {{item.tour}}
+            </h3>
+            <p>
+                {{item.description}}
+            </p>
+
+            <h4 class="cart-item-card-info-price">
+                <u>
+                    {{ getFormattedPrice(item.price) }}
+                </u>
+            </h4>
+        </div>
+        <div class="cart-item-card-delete">
+            <button type="button" class="btn btn-primary">
+                Remove
+            </button>
+        </div>
+    </div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <h4>
+                <u>
+                    {{ getFormattedPrice(getItemsTotal()) }}
+                </u>
+            </h4>
+        </div>
+        <div class="cart-pay">
+            <button type="button" class="btn btn-primary">
+                Pay Now
+            </button>
         </div>
     </div>
 </div>

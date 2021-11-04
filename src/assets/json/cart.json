@@ -2,7 +2,8 @@
     {
         "id": "1",
         "tour": "Tour de France",
-        "description": "A thrilling bicycle race",
-        "price": "200.00"
+        "description": "A thrilling bicycle",
+        "price": "200.00",
+        "img": "assets/images/tour-de-france.jpg"
     }
 ]
