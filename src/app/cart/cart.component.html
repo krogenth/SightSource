@@ -11,6 +11,13 @@
                 {{item.description}}
             </p>
 
+            <input class="cart-item-card-date"
+                    placeholder="datepicker"
+                    type="text"
+                    bsDatepicker
+                    [bsConfig]="{ isAnimated: true }"
+            >
+
             <h4 class="cart-item-card-info-price">
                 <u>
                     {{ getFormattedPrice(item.price) }}

@@ -13,7 +13,6 @@
 }
 
 .cart-item-card-img {
-    padding: 1% 0% 1% 0%;
     float: left;
     width: 150px;
     height: 150px;
@@ -25,9 +24,14 @@
 }
 
 .cart-item-card-info {
-    padding: 1% 1% 1% 1%;
+    padding: 0% 1% 0% 1%;
     display: inline-block;
+    width: 80%;
     max-width: 80%;
+}
+
+.cart-item-card-info > p {
+    min-height: 48px;
 }
 
 .cart-item-card-info-price {
