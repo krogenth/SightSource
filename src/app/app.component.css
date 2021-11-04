@@ -1,0 +1,33 @@
+.head-navbox{
+	position: sticky;top: 0px;z-index: 1;background-color: #996600;padding:1% 1%;
+	margin: auto;
+	width:100%;
+	
+}
+.head-btn-left {
+  transition-duration: 0.4s;
+  background-color:inherit;
+  color:white;
+  padding: 1% 4%;
+  cursor:pointer;
+  white-space:nowrap;
+  vertical-align:middle;
+  border:none;
+  float:left;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right:2%;
+  
+}
+
+.head-btn-left:hover {
+  color: #4CAF50;
+  border-bottom: solid 3px #4CAF50;
+}
+.head-title{
+	text-align:center;
+	display:inline-block;
+	margin: auto;
+	font-family:Helvetica;
+	width:100%;
+}
