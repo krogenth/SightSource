@@ -1,1 +1,74 @@
 <router-outlet></router-outlet>
+<style>
+  .head-navbox{
+	position: sticky;top: 0px;z-index: 1;background-color: #996600;padding:1% 1%;
+	margin: auto;
+	width:100%;
+	
+}
+.head-btn-left {
+  transition-duration: 0.4s;
+  background-color:inherit;
+  color:white;
+  padding: 1% 4%;
+  cursor:pointer;
+  white-space:nowrap;
+  vertical-align:middle;
+  border:none;
+  float:left;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right:2%;
+  
+}
+
+.head-btn-left:hover {
+  color: #4CAF50;
+  border-bottom: solid 3px #4CAF50;
+}
+.head-title{
+	text-align:center;
+	display:inline-block;
+	margin: auto;
+	font-family:Helvetica;
+	width:100%;
+}
+</style>
+
+<div class="container-fluid" style="padding-top: 80px;">
+  <div class="navbar-sticky fixed-top" style="background-color:#996600;">
+      <div class="row">
+        <h3 class="head-title">SightSource</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+          <div class="col-sm-1">
+            <button class="btn btn-toolbar" name="home">Home</button>
+            </div>
+        <div class="col-sm-1">
+          <button class="btn btn-toolbar" name="browse">Browse</button>
+        </div>
+        <div class="col-sm-5">
+        </div>
+        <div class="col-sm-4">
+          <div class="input-group-append">
+            <div class="form-outline">
+              <input class="form-control" type="search" placeholder="search">
+            </div>
+            <span class="input-group-append pull-right">
+              <button class="btn btn-default btn-xs pull-right" type="button">
+                <fa-icon [icon]="faSearch"></fa-icon>
+              </button>
+          
+            </span>
+            <button class="btn btn-default pull-right" type="button" style="margin-left:3%">
+              <fa-icon [icon]="faShoppingCart"></fa-icon>
+            </button>
+             
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    </div>

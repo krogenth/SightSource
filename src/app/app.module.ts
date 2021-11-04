@@ -17,6 +17,8 @@ import { CartComponent } from './cart/cart.component';
 import { LandingComponent } from './landing/landing.component';
 import { JsonService } from "./json.service";
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { JsonService } from "./json.service";
     BrowserAnimationsModule,
     AlertModule.forRoot(),
     ButtonsModule.forRoot(),
+    FontAwesomeModule,
     BsDatepickerModule.forRoot(),
   ],
   providers: [
