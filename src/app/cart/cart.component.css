@@ -21,8 +21,8 @@
 .cart-item-card-info {
     margin: 0 16px;
     display: inline-block;
-    width: 80%;
-    max-width: 75%;
+    width: calc(100% - 200px);
+    max-width: calc(100% - 200px);
 }
 
 .cart-item-card-info > p {
@@ -30,11 +30,11 @@
 }
 
 .cart-item-card-info-price {
-    float: right;
+    text-align: right;
 }
 
 .cart-item-card-delete {
-    margin-right: 5px;
+    margin-left: 20px;
     float: right;
     max-width: 20%;
 }
