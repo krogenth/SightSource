@@ -5,17 +5,48 @@
         height: 700px;
         object-fit: cover;
     }
+
 </style>
 
 <div >
-<div style="width: 90%; height: 90%; margin:auto auto;">
+<div style="width: 80%; height: 90%; margin:auto auto;">
     <carousel [showIndicators]="showIndicators" style="margin:auto auto;">
       <slide *ngFor="let slide of slide; let index=index" class="mx-auto">
+          <h2 style="text-align: center;">See the world, discover yourself</h2>
         <img [src]="slide.image" alt="image slide" class=" advert-img img-responsive center-block img-fluid" style="display: block; width: 100%;">
-			<h4>{{slide.text}}</h4>
+			<h6>{{slide.text}}</h6>
             
          
       </slide>
     </carousel>
   </div>
 </div>
+<h4 style="text-align:center;"> 
+    Find your next adventure here!</h4>
+<h5 style="text-align:center;"> 
+    Click one of the tours above or a location in the map below to get started.</h5>
+
+
+
+    <div class="row" style="margin-top:20px;">
+        <div *ngFor="let country of countries; let i = index">
+            <div class="clearfix" *ngIf="i % 4 ==0">
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem; margin-left: 40px; margin-right:70px;">
+                    <h5 class="card-title">{{country.name}}</h5>
+                    <img src={{country.img}}/>
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{country.description}}
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More!</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+
+
