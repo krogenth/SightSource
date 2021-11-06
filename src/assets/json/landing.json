@@ -3,47 +3,47 @@
         "id": "1",
         "name": "The United States",
         "description": "A large country with many different cultures and environments to experience",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/us.jpg"
     },
     {
         "id": "2",
         "name": "Canada",
         "description": "A large country prime for winter sports lovers",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/canada.jpg"
     },
 
     {
         "id": "3",
         "name": "The Bahamas",
         "description": "The perfect country for a tropical island getaway! For those who love touristy locations, with a wide range of popular resorts",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/bahamas.jpg"
     }, 
     {
         "id": "4",
         "name": "Australia",
         "description": "An arid country full of exotic wildlife and adventures. Choose from activites such as visiting large cities like Sydney to exploring the brush",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/aus.jpg"
     },
     {
         "id": "5",
         "name": "New Zealand",
         "description": "An arid country full of exotic wildlife and adventures. Choose from activites such as visiting large cities like Sydney to exploring the brush",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/newZealand.jpg"
     },
     {
         "id": "6",
         "name": "Japan",
         "description": "A popular destination for those who enjoy being enveloped in rich culture and experiencing new things",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/japan.jpg"
     },{
         "id": "7",
         "name": "France",
         "description": "An extremely popular destination for wine lovers, enjoy vast vinyards and sprawling cities like Paris",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/france.jpg"
     },{
         "id": "8",
         "name": "Italy",
         "description": "From vinyards and romantic cannals to the surviving testemants to the Roman empires achievements, Italy has something for everyone.",
-        "img": "assets/images/tour-de-france.jpg"
+        "img": "assets/images/italy.jpg"
     }
 ]
