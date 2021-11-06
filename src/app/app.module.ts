@@ -19,6 +19,9 @@ import { JsonService } from "./json.service";
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+//landing imports
+import {CarouselModule} from "ngx-bootstrap/carousel";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ButtonsModule.forRoot(),
     FontAwesomeModule,
     BsDatepickerModule.forRoot(),
+    CarouselModule.forRoot(),
   ],
   providers: [
     CurrencyPipe,
