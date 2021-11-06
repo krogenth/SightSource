@@ -5,5 +5,12 @@
         "description": "A thrilling bicycle race",
         "price": "200.00",
         "img": "assets/images/tour-de-france.jpg"
+    },
+    {
+        "id": "2",
+        "tour": "Tour de France",
+        "description": "A thrilling bicycle race",
+        "price": "200.00",
+        "img": "assets/images/tour-de-france.jpg"
     }
 ]

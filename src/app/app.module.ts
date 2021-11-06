@@ -4,6 +4,8 @@ import { CurrencyPipe } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
 
 //  ngx-bootstrap imports
 import { AlertModule } from "ngx-bootstrap/alert";
@@ -30,10 +32,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatSliderModule,
     AlertModule.forRoot(),
     ButtonsModule.forRoot(),
-    FontAwesomeModule,
     BsDatepickerModule.forRoot(),
+    FontAwesomeModule,
   ],
   providers: [
     CurrencyPipe,

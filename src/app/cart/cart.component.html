@@ -1,48 +1,54 @@
-<div class="cart-body" *ngIf="items" style="padding-top:80px;">
-    <div class="cart-item-card" *ngFor="let item of items; let i = index">
-        <div class="cart-item-card-img">
-            <img src={{item.img}} />
-        </div>
-        <div class="cart-item-card-info">
-            <h3>
-                {{item.tour}}
-            </h3>
-            <p>
-                {{item.description}}
-            </p>
+<ng-container *ngIf="items">
+    <div class="cart-body">
+        <mat-card class="cart-item-card" *ngFor="let item of items; let i = index">
+            <img class="cart-item-card-img" src={{item.img}} />
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>
+                        {{item.tour}}
+                    </h3>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="cart-item-card-info">
+                <p>
+                    {{item.description}}
+                </p>
+                <br>
+                <input class="cart-item-card-date"
+                        placeholder="datepicker"
+                        type="text"
+                        bsDatepicker
+                        [bsConfig]="{ isAnimated: true }"
+                >
 
-            <input class="cart-item-card-date"
-                    placeholder="datepicker"
-                    type="text"
-                    bsDatepicker
-                    [bsConfig]="{ isAnimated: true }"
-            >
+                <h4 class="cart-item-card-info-price">
+                    <u>
+                        {{ getFormattedPrice(item.price) }}
+                    </u>
+                </h4>
+            </mat-card-content>
+            <mat-card-actions class="cart-item-card-delete" align="end">
+                <button mat-button class="btn btn-primary">
+                    Remove
+                </button>
+            </mat-card-actions>
+        </mat-card>
 
-            <h4 class="cart-item-card-info-price">
-                <u>
-                    {{ getFormattedPrice(item.price) }}
-                </u>
-            </h4>
-        </div>
-        <div class="cart-item-card-delete">
-            <button type="button" class="btn btn-primary">
-                Remove
-            </button>
-        </div>
+        <mat-card class="cart-footer">
+            <mat-card-content>
+                <div class="cart-total">
+                    <h4>
+                        <u>
+                            {{ getFormattedPrice(getItemsTotal()) }}
+                        </u>
+                    </h4>
+                </div>
+                <mat-card-actions class="cart-pay">
+                    <button type="button" class="btn btn-primary">
+                        Pay Now
+                    </button>
+                </mat-card-actions>
+            </mat-card-content>
+        </mat-card>
     </div>
-
-    <div class="cart-footer">
-        <div class="cart-total">
-            <h4>
-                <u>
-                    {{ getFormattedPrice(getItemsTotal()) }}
-                </u>
-            </h4>
-        </div>
-        <div class="cart-pay">
-            <button type="button" class="btn btn-primary">
-                Pay Now
-            </button>
-        </div>
-    </div>
-</div>
+</ng-container>
