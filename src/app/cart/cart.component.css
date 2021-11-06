@@ -7,27 +7,22 @@
 
 .cart-item-card {
     padding: 1% 1% 1% 1%;
-    margin-bottom: 1%;
-    border-style: solid;
-    border-color: black;
+    margin: 1% 1% 1% 1%;
+    min-height: 175px;
 }
 
 .cart-item-card-img {
+    padding: 0.1%;
     float: left;
     width: 150px;
     height: 150px;
 }
 
-.cart-item-card-img > img {
-    width: 150px;
-    height: 150px;
-}
-
 .cart-item-card-info {
-    padding: 0% 1% 0% 1%;
+    margin: 0 16px;
     display: inline-block;
     width: 80%;
-    max-width: 80%;
+    max-width: 75%;
 }
 
 .cart-item-card-info > p {
@@ -46,8 +41,7 @@
 
 .cart-footer {
     padding: 1% 1% 1% 1%;
-    border-style: solid;
-    border-color: black;
+    margin: 1% 1% 1% 1%;
     float: right;
     min-width: 225px;
 }
