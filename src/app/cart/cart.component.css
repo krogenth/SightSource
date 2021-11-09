@@ -2,6 +2,7 @@
     position: relative;
     margin: 25px auto;
     max-width: 50%;
+    min-width: 600px;
     overflow-y: hidden;
 }
 
@@ -9,6 +10,7 @@
     padding: 1% 1% 1% 1%;
     margin: 1% 1% 1% 1%;
     min-height: 175px;
+    min-width: 550px;
 }
 
 .cart-item-card-img {
@@ -21,8 +23,8 @@
 .cart-item-card-info {
     margin: 0 16px;
     display: inline-block;
-    width: calc(100% - 200px);
-    max-width: calc(100% - 200px);
+    width: calc(100% - 300px);
+    max-width: calc(100% - 300px);
 }
 
 .cart-item-card-info > p {
@@ -30,28 +32,35 @@
 }
 
 .cart-item-card-info-price {
-    text-align: right;
+    float: right;
+}
+
+.cart-item-card-quantity {
+    float: right;
+    max-width: 20%;
+    min-width: 100px;
 }
 
 .cart-item-card-delete {
-    margin-left: 20px;
-    float: right;
-    max-width: 20%;
+    margin-right: 5px;
 }
 
 .cart-footer {
     padding: 1% 1% 1% 1%;
     margin: 1% 1% 1% 1%;
     float: right;
-    min-width: 225px;
+    min-width: 200px;
 }
 
-.cart-total {
-    padding: 1% 1% 1% 1%;
+.cart-footer-total {
+    position: absolute;
+    top: calc(50% + 9px);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     float: left;
 }
 
-.cart-pay {
+.cart-footer-pay {
     margin-right: 5px;
     float: right;
 }

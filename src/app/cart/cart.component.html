@@ -2,16 +2,18 @@
     <div class="cart-body">
         <mat-card class="cart-item-card" *ngFor="let item of items; let i = index">
             <img class="cart-item-card-img" src={{item.img}} />
+
             <mat-card-header>
                 <mat-card-title>
                     <h3>
-                        {{ item.tour }}
+                        {{item.tour}}
                     </h3>
                 </mat-card-title>
             </mat-card-header>
+
             <mat-card-content class="cart-item-card-info">
                 <p>
-                    {{ item.description }}
+                    {{item.description}}
                 </p>
                 <br>
                 <input class="cart-item-card-date"
@@ -26,24 +28,27 @@
                         {{ getFormattedPrice(item.price) }}
                     </u>
                 </h4>
+            </mat-card-content>
+
+            <div class="cart-item-card-quantity">
                 <mat-card-actions class="cart-item-card-delete" align="end">
                     <button mat-button class="btn btn-primary">
                         Remove
                     </button>
                 </mat-card-actions>
-            </mat-card-content>
+            </div>
         </mat-card>
 
         <mat-card class="cart-footer">
             <mat-card-content>
-                <div class="cart-total">
+                <div class="cart-footer-total">
                     <h4>
                         <u>
                             {{ getFormattedPrice(getItemsTotal()) }}
                         </u>
                     </h4>
                 </div>
-                <mat-card-actions class="cart-pay">
+                <mat-card-actions class="cart-footer-pay">
                     <button type="button" class="btn btn-primary">
                         Pay Now
                     </button>
