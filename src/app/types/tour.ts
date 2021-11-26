@@ -3,5 +3,6 @@ export interface Tour {
     tour: string
     description: string
     price: number
+    duration: string
     img: string
 }

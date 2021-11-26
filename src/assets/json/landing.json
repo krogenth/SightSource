@@ -3,12 +3,58 @@
         "id": "1",
         "name": "The United States",
         "description": "A large country with many different cultures and environments to experience",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder America -0",
+            "description": "Placeholder America 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder America -1",
+            "description": "Placeholder America 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder America -2",
+            "description": "Placeholder America 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/us.jpg"
     },
     {
         "id": "2",
         "name": "Canada",
         "description": "A large country prime for winter sports lovers",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder Canada-0",
+            "description": "Placeholder Canada 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder Canada-1",
+            "description": "Placeholder Canada 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder Canada-2",
+            "description": "Placeholder Canada 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/canada.jpg"
     },
 
@@ -16,34 +62,172 @@
         "id": "3",
         "name": "The Bahamas",
         "description": "The perfect country for a tropical island getaway! For those who love touristy locations, with a wide range of popular resorts",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder Bahamas-0",
+            "description": "Placeholder Bahamas 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder Bahamas-1",
+            "description": "Placeholder Bahamas 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder Bahamas-2",
+            "description": "Placeholder Bahamas 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/bahamas.jpg"
     }, 
     {
         "id": "4",
         "name": "Australia",
         "description": "An arid country full of exotic wildlife and adventures. Choose from activites such as visiting large cities like Sydney to exploring the brush",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder Australia-0",
+            "description": "Placeholder Australia 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder Australia-1",
+            "description": "Placeholder Australia 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder Australia-2",
+            "description": "Placeholder Australia 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/aus.jpg"
     },
     {
         "id": "5",
         "name": "New Zealand",
         "description": "An arid country full of exotic wildlife and adventures. Choose from activites such as visiting large cities like Sydney to exploring the brush",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder New Zealand-0",
+            "description": "Placeholder New Zealand 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder New Zealand-1",
+            "description": "Placeholder New Zealand 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder New Zealand-2",
+            "description": "Placeholder New Zealand 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/newZealand.jpg"
     },
     {
         "id": "6",
         "name": "Japan",
         "description": "A popular destination for those who enjoy being enveloped in rich culture and experiencing new things",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder Japan-0",
+            "description": "Placeholder Japan 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder Japan-1",
+            "description": "Placeholder Japan 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder Japan-2",
+            "description": "Placeholder Japan 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/japan.jpg"
     },{
         "id": "7",
         "name": "France",
         "description": "An extremely popular destination for wine lovers, enjoy vast vinyards and sprawling cities like Paris",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder France-0",
+            "description": "Placeholder France 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder France-1",
+            "description": "Placeholder France 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder France-2",
+            "description": "Placeholder France 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/france.jpg"
     },{
         "id": "8",
         "name": "Italy",
         "description": "From vinyards and romantic cannals to the surviving testemants to the Roman empires achievements, Italy has something for everyone.",
+        "tours":[{
+            "id": "0",
+            "tour": "Placeholder Italy-0",
+            "description": "Placeholder Italy 1",
+            "price": "1",
+            "Duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
+        },{
+            "id": "1",
+            "tour": "Placeholder Italy-1",
+            "description": "Placeholder Italy 2",
+            "price": "2",
+            "Duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
+        },
+        {
+            "id": "2",
+            "tour": "Placeholder Italy-2",
+            "description": "Placeholder Italy 3",
+            "price": "3",
+            "Duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
+        }],
         "img": "assets/images/italy.jpg"
     }
 ]

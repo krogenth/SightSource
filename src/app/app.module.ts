@@ -6,6 +6,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //  ngx-bootstrap imports
 import { AlertModule } from "ngx-bootstrap/alert";
@@ -24,11 +26,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //landing imports
 import {CarouselModule} from "ngx-bootstrap/carousel";
 
+//browse imports
+import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import { BrowseComponent } from './browse/browse.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
     LandingComponent,
+    BrowseComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,11 @@ import {CarouselModule} from "ngx-bootstrap/carousel";
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
     FontAwesomeModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CurrencyPipe,
