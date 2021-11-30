@@ -17,8 +17,10 @@ import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker
 //  app specific imports
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component';
 import { LandingComponent } from './landing/landing.component';
+import { BrowseComponent } from './browse/browse.component';
+import { DetailComponent } from './detail/detail.component';
+import { CartComponent } from './cart/cart.component';
 import { JsonService } from "./json.service";
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -28,14 +30,15 @@ import {CarouselModule} from "ngx-bootstrap/carousel";
 
 //browse imports
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
-import { BrowseComponent } from './browse/browse.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
     LandingComponent,
-    BrowseComponent
+    BrowseComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

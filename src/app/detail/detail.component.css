@@ -1,0 +1,23 @@
+.detail-body {
+    position: relative;
+    margin: 25px auto;
+    max-width: 80%;
+    min-width: 600px;
+    overflow-y: hidden;
+}
+
+.detail-tour-img {
+    float: left;
+}
+
+.detail-tour-title {
+
+}
+
+.detail-tour-option-bar {
+
+}
+
+.detail-tour-description {
+    
+}

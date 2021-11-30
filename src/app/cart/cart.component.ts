@@ -14,10 +14,7 @@ export class CartComponent implements OnInit {
   items: Tour[] = [];
 
   constructor(private json: JsonService, private currencyPipe: CurrencyPipe) {
-    json.getData('assets/json/cart.json').subscribe(result => {
-      this.items = result;
-      console.log(this.items);
-    })
+    this.items = localStorage.cart ? JSON.parse(localStorage.cart) as Tour[] : [] as Tour[];
   }
 
   ngOnInit(): void {
@@ -37,6 +34,11 @@ export class CartComponent implements OnInit {
       total = +total + +item.price;
     }
     return total;
+  }
+
+  removeItem(id: number) {
+    this.items = this.items.filter(tour => tour.id !== id);
+    localStorage.cart = JSON.stringify(this.items);
   }
 
 }

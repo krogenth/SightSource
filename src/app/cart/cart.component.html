@@ -1,4 +1,4 @@
-<ng-container *ngIf="items">
+<ng-container *ngIf="items && items.length > 0">
     <div class="cart-body">
         <mat-card class="cart-item-card" *ngFor="let item of items; let i = index">
             <img class="cart-item-card-img" src={{item.img}} />
@@ -32,7 +32,7 @@
 
             <div class="cart-item-card-quantity">
                 <mat-card-actions class="cart-item-card-delete" align="end">
-                    <button mat-button class="btn btn-primary">
+                    <button mat-button class="btn btn-primary" (click)="removeItem(item.id);">
                         Remove
                     </button>
                 </mat-card-actions>

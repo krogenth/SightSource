@@ -1,0 +1,21 @@
+<ng-container *ngIf="tour">
+    <div class="detail-body">
+        <img class="detail-tour-img" src={{tour.img}}/>
+        <div class="detail-tour-title">
+            {{tour.tour}}
+        </div>
+        
+        <div class="detail-tour-option-bar">
+            <div class="detail-tour-option-price">
+                {{ getFormattedPrice(tour.price) }}
+            </div>
+            <button mat-button class="btn btn-primary" (click)="addItemToCart();" [routerLink]="['../../cart']">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="detail-tour-description">
+            {{tour.description}}
+        </div>
+    </div>
+</ng-container>
