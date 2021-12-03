@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { ActivatedRoute } from '@angular/router';
 import { JsonService } from "../json.service";
 
 import { Country } from "../types/country";
@@ -16,29 +17,49 @@ import {Tour} from "../types/tour";
 })
 export class BrowseComponent implements OnInit {
   tours: Tour[] = [];
+  allTours: Tour[] = [];
   countries: Country[] = [];
   items:any=[];
   allSelected:boolean;
   checked:any;
   
 
-  constructor(private json: JsonService) {
+  constructor(private json: JsonService, private actRoute: ActivatedRoute) {
     
     this.allSelected = false;
 
     json.getData('assets/json/landing.json').subscribe(result => {
       
-      for(let i in result){
-        this.items.push(
-          {id:result[i].id,
-            value: result[i].name,
-          selected:false}
-          );
-        for(let j in result[i].tours){
-          this.tours.push(result[i].tours[j]);
+
+      if(this.actRoute.snapshot.params.countryid){
+        for(let i in result){
+          
+            this.items.push(
+              {id:result[i].id,
+              value: result[i].name,
+              selected:result[i].id===this.actRoute.snapshot.params.countryid?true:false}
+            );
+              
+              for(let j in result[i].tours){
+                this.allTours.push(result[i].tours[j]);
+              }
+            
+        }
+        
+      }
+      else
+      {
+        for(let i in result){
+          this.items.push(
+            {id:result[i].id,
+              value: result[i].name,
+            selected:false}
+            );
+          for(let j in result[i].tours){
+            this.allTours.push(result[i].tours[j]);
+          }
         }
       }
-      console.log(this.items);
     });
     this.getCheckedItems();
 
@@ -46,9 +67,14 @@ export class BrowseComponent implements OnInit {
   }
   getCheckedItems(){
     this.checked = [];
+    this.tours=[];
     for (let i in this.items) {
-      if(this.items[i].selected)
-      this.checked.push(this.items[i]);
+      if(this.items[i].selected){
+        this.checked.push(this.items[i]);
+        this.allTours.filter(tour=>tour.countryId==this.items[i].id).forEach(element => {
+          this.tours.push(element);
+        });
+      }
     }
     this.checked = JSON.stringify(this.checked);
   }
