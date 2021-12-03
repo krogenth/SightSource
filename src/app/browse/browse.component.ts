@@ -25,13 +25,14 @@ export class BrowseComponent implements OnInit {
   
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute) {
-    
-    this.allSelected = false;
+    this.allSelected = true;
 
     json.getData('assets/json/landing.json').subscribe(result => {
       
 
       if(this.actRoute.snapshot.params.countryid){
+        this.allSelected = false;
+
         for(let i in result){
           
             this.items.push(
@@ -49,19 +50,21 @@ export class BrowseComponent implements OnInit {
       }
       else
       {
+
         for(let i in result){
           this.items.push(
             {id:result[i].id,
               value: result[i].name,
-            selected:false}
+            selected:true}
             );
           for(let j in result[i].tours){
             this.allTours.push(result[i].tours[j]);
           }
         }
       }
+      this.getCheckedItems();
     });
-    this.getCheckedItems();
+    
 
 
   }
