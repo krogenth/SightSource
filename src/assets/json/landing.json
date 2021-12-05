@@ -8,39 +8,27 @@
             "countryId":"1",
             "tour": "Placeholder America -0",
             "description": "Placeholder America 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "1",
             "countryId":"1",
             "tour": "Placeholder America -1",
             "description": "Placeholder America 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "2",
             "countryId":"1",
             "tour": "Placeholder America -2",
             "description": "Placeholder America 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/us.jpg"
     },
@@ -53,39 +41,27 @@
             "countryId":"2",
             "tour": "Placeholder Canada-0",
             "description": "Placeholder Canada 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "4",
             "countryId":"2",
             "tour": "Placeholder Canada-1",
             "description": "Placeholder Canada 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "5",
             "countryId":"2",
             "tour": "Placeholder Canada-2",
             "description": "Placeholder Canada 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/canada.jpg"
     },
@@ -98,39 +74,27 @@
             "countryId":"3",
             "tour": "Placeholder Bahamas-0",
             "description": "Placeholder Bahamas 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "7",
             "countryId":"3",
             "tour": "Placeholder Bahamas-1",
             "description": "Placeholder Bahamas 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "8",
             "countryId":"3",
             "tour": "Placeholder Bahamas-2",
             "description": "Placeholder Bahamas 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/bahamas.jpg"
     }, 
@@ -143,39 +107,27 @@
             "countryId":"4",
             "tour": "Placeholder Australia-0",
             "description": "Placeholder Australia 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "10",
             "countryId":"4",
             "tour": "Placeholder Australia-1",
             "description": "Placeholder Australia 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 day",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "11",
             "countryId":"4",
             "tour": "Placeholder Australia-2",
             "description": "Placeholder Australia 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 day",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/aus.jpg"
     },
@@ -188,39 +140,27 @@
             "countryId":"5",
             "tour": "Placeholder New Zealand-0",
             "description": "Placeholder New Zealand 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "13",
             "countryId":"5",
             "tour": "Placeholder New Zealand-1",
             "description": "Placeholder New Zealand 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "14",
             "countryId":"5",
             "tour": "Placeholder New Zealand-2",
             "description": "Placeholder New Zealand 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/newZealand.jpg"
     },
@@ -233,39 +173,27 @@
             "countryId":"6",
             "tour": "Placeholder Japan-0",
             "description": "Placeholder Japan 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "16",
             "countryId":"6",
             "tour": "Placeholder Japan-1",
             "description": "Placeholder Japan 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "17",
             "countryId":"6",
             "tour": "Placeholder Japan-2",
             "description": "Placeholder Japan 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 day",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/japan.jpg"
     },
@@ -278,39 +206,27 @@
             "countryId":"7",
             "tour": "Placeholder France-0",
             "description": "Placeholder France 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "19",
             "countryId":"7",
             "tour": "Placeholder France-1",
             "description": "Placeholder France 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 days",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "20",
             "countryId":"7",
             "tour": "Placeholder France-2",
             "description": "Placeholder France 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/france.jpg"
     },
@@ -323,39 +239,27 @@
             "countryId":"8",
             "tour": "Placeholder Italy-0",
             "description": "Placeholder Italy 1",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "1 day",
-                    "price": "1"
-                }
-            ]
+            "price": "1",
+            "duration": "1 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "22",
             "countryId":"8",
             "tour": "Placeholder Italy-1",
             "description": "Placeholder Italy 2",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "2 day",
-                    "price": "2"
-                }
-            ]
+            "price": "2",
+            "duration": "2 day",
+            "img": "assets/images/placeholder.jpg"
         },
         {
             "id": "23",
             "countryId":"8",
             "tour": "Placeholder Italy-2",
             "description": "Placeholder Italy 3",
-            "img": "assets/images/placeholder.jpg",
-            "options": [
-                {
-                    "duration": "3 days",
-                    "price": "3"
-                }
-            ]
+            "price": "3",
+            "duration": "3 day",
+            "img": "assets/images/placeholder.jpg"
         }],
         "img": "assets/images/italy.jpg"
     }

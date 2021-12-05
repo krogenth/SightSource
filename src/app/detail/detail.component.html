@@ -4,22 +4,26 @@
 
         <div class="detail-tour-contents">
             <div class="detail-tour-title">
-                <h3>
+                <h1>
                     {{tour.tour}}
-                </h3>
+                </h1>
             </div>
             
             <div class="detail-tour-option-bar">
-                <div class="detail-tour-option-duration" *ngIf="tour.options">
-                    <select ng-model="tour-option-drop">
-                        <option *ngFor="let opt of tour.options" value="{{opt.duration}}">{{opt.duration}}</option>
-                    </select>
-                </div>
+                <input class="detail-tour-option-date"
+                        placeholder="datepicker"
+                        type="text"
+                        bsDatepicker
+                        [bsConfig]="{ isAnimated: true }"
+                        [(ngModel)]="date"
+                        (ngModelChange)="setTourDate($event)"
+                >
+
                 <div class="detail-tour-option-price">
                     {{ getFormattedPrice(tour.price) }}
                 </div>
                 <div class="detail-tour-option-add">
-                    <button mat-button class="btn btn-primary" (click)="addItemToCart();" [routerLink]="['../../cart']">
+                    <button mat-button class="btn btn-primary" (click)="addTourToCart();" [routerLink]="['../../cart']">
                         Add to Cart
                     </button>
                 </div>

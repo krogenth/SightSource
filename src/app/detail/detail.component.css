@@ -18,27 +18,29 @@
 }
 
 .detail-tour-title {
-    margin: 0 16px;
+    margin: 0 32px;
 }
 
 .detail-tour-option-bar {
     max-width: 50%;
     margin: 0 16px;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 16px;
 }
 
-.detail-tour-option-duration {
-
+.detail-tour-option-date {
+    display: table-cell;
 }
 
 .detail-tour-option-price {
-    float: left;
-    margin: 0% 1% 0% 1%;
+    display: table-cell;
 }
 
 .detail-tour-option-add {
-    margin: 0% 1% 0% 1%;
+    display: table-cell;
 }
 
 .detail-tour-description {
-    margin: 0 16px;
+    margin: 0 32px;
 }

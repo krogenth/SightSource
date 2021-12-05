@@ -21,6 +21,8 @@
                         type="text"
                         bsDatepicker
                         [bsConfig]="{ isAnimated: true }"
+                        [(ngModel)]="item.date"
+                        (ngModelChange)="setItemDate(item, $event)"
                 >
 
                 <h4 class="cart-item-card-info-price">

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { ArgumentOutOfRangeError } from 'rxjs';
 import { JsonService } from "../json.service";
-import { Tour } from "../types/tour";
+import { Item } from "../types/cart-item";
 
 @Component({
   selector: 'app-cart',
@@ -11,17 +11,17 @@ import { Tour } from "../types/tour";
 })
 export class CartComponent implements OnInit {
 
-  items: Tour[] = [];
+  items: Item[] = [];
 
   constructor(private json: JsonService, private currencyPipe: CurrencyPipe) {
-    this.items = localStorage.cart ? JSON.parse(localStorage.cart) as Tour[] : [] as Tour[];
+    debugger;
+    this.items = localStorage.cart ? JSON.parse(localStorage.cart) as Item[] : [] as Item[];
+    this.items.forEach(elem => {
+      elem.date = new Date(elem.date);
+    });
   }
 
   ngOnInit(): void {
-  }
-
-  getItems(): Tour[] {
-    return this.items;
   }
 
   getFormattedPrice(price: number) {
@@ -39,6 +39,10 @@ export class CartComponent implements OnInit {
   removeItem(id: number) {
     this.items = this.items.filter(tour => tour.id !== id);
     localStorage.cart = JSON.stringify(this.items);
+  }
+
+  setItemDate(item: Item, date: Date) {
+    item.date = date;
   }
 
 }

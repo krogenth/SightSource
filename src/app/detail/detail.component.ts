@@ -14,6 +14,7 @@ import { Tour } from "../types/tour";
 export class DetailComponent implements OnInit {
 
   tour: Tour = {} as Tour;
+  date: Date = new Date();
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {}
 
@@ -36,13 +37,21 @@ export class DetailComponent implements OnInit {
     return this.currencyPipe.transform(price, '$');
   }
 
-  addItemToCart(): void {
-    debugger;
-    let cart = localStorage.cart ? JSON.parse(localStorage.cart) as Tour[] : [] as Tour[];
+  addTourToCart(): void {
+    let cart = localStorage.cart ? JSON.parse(localStorage.cart) as any[] : [] as any[];
     if(!cart.find(element => element.id === this.tour.id)) {
       cart.push(this.tour);
     }
+    cart.forEach(elem => {
+      if (elem === this.tour) {
+        elem.date = this.date;
+      }
+    });
     localStorage.cart = JSON.stringify(cart);
+  }
+
+  setTourDate(date: Date) {
+    this.date = date;
   }
 
 }

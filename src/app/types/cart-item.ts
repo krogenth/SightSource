@@ -1,4 +1,4 @@
-export interface Tour {
+export interface Item {
     id: number
     countryId:number
     tour: string
@@ -6,4 +6,5 @@ export interface Tour {
     price: number
     duration: string
     img: string
+    date: Date
 }
