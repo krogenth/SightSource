@@ -1,21 +1,33 @@
 <ng-container *ngIf="tour">
     <div class="detail-body">
         <img class="detail-tour-img" src={{tour.img}}/>
-        <div class="detail-tour-title">
-            {{tour.tour}}
-        </div>
-        
-        <div class="detail-tour-option-bar">
-            <div class="detail-tour-option-price">
-                {{ getFormattedPrice(tour.price) }}
-            </div>
-            <button mat-button class="btn btn-primary" (click)="addItemToCart();" [routerLink]="['../../cart']">
-                Add to Cart
-            </button>
-        </div>
 
-        <div class="detail-tour-description">
-            {{tour.description}}
+        <div class="detail-tour-contents">
+            <div class="detail-tour-title">
+                <h3>
+                    {{tour.tour}}
+                </h3>
+            </div>
+            
+            <div class="detail-tour-option-bar">
+                <div class="detail-tour-option-duration" *ngIf="tour.options">
+                    <select ng-model="tour-option-drop">
+                        <option *ngFor="let opt of tour.options" value="{{opt.duration}}">{{opt.duration}}</option>
+                    </select>
+                </div>
+                <div class="detail-tour-option-price">
+                    {{ getFormattedPrice(tour.price) }}
+                </div>
+                <div class="detail-tour-option-add">
+                    <button mat-button class="btn btn-primary" (click)="addItemToCart();" [routerLink]="['../../cart']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+    
+            <div class="detail-tour-description">
+                {{tour.description}}
+            </div>
         </div>
     </div>
 </ng-container>

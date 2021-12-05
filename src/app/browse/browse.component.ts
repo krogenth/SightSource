@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { ActivatedRoute } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
+
 import { JsonService } from "../json.service";
 
 import { Country } from "../types/country";
@@ -24,7 +26,7 @@ export class BrowseComponent implements OnInit {
   checked:any;
   
 
-  constructor(private json: JsonService, private actRoute: ActivatedRoute) {
+  constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {
     this.allSelected = true;
 
     json.getData('assets/json/landing.json').subscribe(result => {
@@ -41,22 +43,21 @@ export class BrowseComponent implements OnInit {
               selected:result[i].id===this.actRoute.snapshot.params.countryid?true:false}
             );
               
-              for(let j in result[i].tours){
-                this.allTours.push(result[i].tours[j]);
-              }
+            for(let j in result[i].tours){
+              this.allTours.push(result[i].tours[j]);
+            }
             
         }
         
       }
       else
       {
-
         for(let i in result){
-          this.items.push(
-            {id:result[i].id,
+          this.items.push({
+              id:result[i].id,
               value: result[i].name,
-            selected:true}
-            );
+              selected:true
+            });
           for(let j in result[i].tours){
             this.allTours.push(result[i].tours[j]);
           }
@@ -64,10 +65,12 @@ export class BrowseComponent implements OnInit {
       }
       this.getCheckedItems();
     });
-    
-
-
   }
+
+  getFormattedPrice(price: number) {
+    return this.currencyPipe.transform(price, '$');
+  }
+
   getCheckedItems(){
     this.checked = [];
     this.tours=[];

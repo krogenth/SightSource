@@ -70,12 +70,12 @@ role="menu" aria-labelledby="button-nested">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h3 class="card-text">
-                                            <b>Price:</b> ${{tour.price}}
+                                            <b>Price:</b> {{getFormattedPrice(tour.options[0].price)}}
                                         </h3>
                                     </div>
                                     <div class="col-md-6">
                                         <h3 class="card-text">
-                                            <b>Duration:</b> {{tour.duration}}
+                                            <b>Duration:</b> {{tour.options[0].duration}}
                                         </h3>
                                     </div>    
                                 </div>

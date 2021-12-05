@@ -8,16 +8,37 @@
 
 .detail-tour-img {
     float: left;
+    height: 500px;
+    width: 500px;
+}
+
+.detail-tour-contents {
+    display: inline-block;
+    width: calc(100% - 500px - 32px);
 }
 
 .detail-tour-title {
-
+    margin: 0 16px;
 }
 
 .detail-tour-option-bar {
+    max-width: 50%;
+    margin: 0 16px;
+}
+
+.detail-tour-option-duration {
 
 }
 
+.detail-tour-option-price {
+    float: left;
+    margin: 0% 1% 0% 1%;
+}
+
+.detail-tour-option-add {
+    margin: 0% 1% 0% 1%;
+}
+
 .detail-tour-description {
-    
+    margin: 0 16px;
 }
