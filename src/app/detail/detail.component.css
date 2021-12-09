@@ -6,10 +6,32 @@
     overflow-y: hidden;
 }
 
-.detail-tour-img {
+.detail-tour-img-content {
     float: left;
+}
+
+.detail-tour-img {
     height: 500px;
     width: 500px;
+    margin-bottom: 1%;
+}
+
+.detail-tour-related {
+    position: relative;
+}
+
+.detail-tour-related-card {
+    width: 200px;
+    height: 250px;
+    margin: 1% 1% 1% 1%;
+}
+
+.detail-tour-related-location {
+    float: left;
+}
+
+.detail-tour-related-price {
+    float: right;
 }
 
 .detail-tour-contents {

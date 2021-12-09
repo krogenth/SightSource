@@ -5,5 +5,5 @@ export interface Country {
     name: string
     description: string
     tours: Array<Tour>
-    img: string
+    thumbnail: string
 }

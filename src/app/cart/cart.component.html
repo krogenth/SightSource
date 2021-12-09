@@ -1,7 +1,11 @@
-<ng-container *ngIf="items && items.length > 0">
+<ng-container *ngIf="items && items.length > 0 then cartNonempty; else cartEmpty">
+    
+</ng-container>
+
+<ng-template #cartNonempty>
     <div class="cart-body">
         <mat-card class="cart-item-card" *ngFor="let item of items; let i = index">
-            <img class="cart-item-card-img" src={{item.img}} />
+            <img class="cart-item-card-img" src={{item.thumbnail}} />
 
             <mat-card-header>
                 <mat-card-title>
@@ -58,4 +62,25 @@
             </mat-card-content>
         </mat-card>
     </div>
-</ng-container>
+</ng-template>
+
+<ng-template #cartEmpty>
+    <div class="cart-body">
+        <mat-card class="cart-footer">
+            <mat-card-content>
+                <div class="cart-footer-total">
+                    <h4>
+                        <u>
+                            {{ getFormattedPrice(getItemsTotal()) }}
+                        </u>
+                    </h4>
+                </div>
+                <mat-card-actions class="cart-footer-pay">
+                    <button type="button" class="btn btn-primary" disabled>
+                        Pay Now
+                    </button>
+                </mat-card-actions>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</ng-template>

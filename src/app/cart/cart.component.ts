@@ -14,7 +14,6 @@ export class CartComponent implements OnInit {
   items: Item[] = [];
 
   constructor(private json: JsonService, private currencyPipe: CurrencyPipe) {
-    debugger;
     this.items = localStorage.cart ? JSON.parse(localStorage.cart) as Item[] : [] as Item[];
     this.items.forEach(elem => {
       elem.date = new Date(elem.date);

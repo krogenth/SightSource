@@ -5,6 +5,6 @@ export interface Item {
     description: string
     price: number
     duration: string
-    img: string
+    thumbnail: string
     date: Date
 }

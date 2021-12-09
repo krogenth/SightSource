@@ -1,6 +1,22 @@
 <ng-container *ngIf="tour">
     <div class="detail-body">
-        <img class="detail-tour-img" src={{tour.img}}/>
+        <div class="detail-tour-img-content">
+            <img class="detail-tour-img" src={{tour.thumbnail}}/>
+            <br>
+            <div class="detail-tour-related">
+                <mat-card class="detail-tour-related-card" *ngFor="let relatedTour of relatedTours">
+                    <img mat-card-image src="relatedTour.thumbnail" />
+                    <mat-card-content>
+                        <div class="detail-tour-related-location">
+                            {{ countries[relatedTour.countryId - 1] }}
+                        </div>
+                        <div class="detail-tour-related-price">
+                            {{ getFormattedPrice(relatedTour.price) }}
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
 
         <div class="detail-tour-contents">
             <div class="detail-tour-title">

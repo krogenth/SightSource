@@ -18,7 +18,6 @@ export class LandingComponent implements OnInit {
   constructor(private json: JsonService) {
     json.getData('assets/json/landing.json').subscribe(result => {
       this.countries = result;
-      console.log(this.countries);
     })
   }
 

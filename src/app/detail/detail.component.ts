@@ -13,20 +13,23 @@ import { Tour } from "../types/tour";
 })
 export class DetailComponent implements OnInit {
 
+  countries: string[] = [] as string[];
   tour: Tour = {} as Tour;
+  relatedTours: Tour[] = [] as Tour[];
   date: Date = new Date();
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {}
 
   ngOnInit(): void {
     let tourid = this.actRoute.snapshot.params.tourid;
-    console.log(tourid);
     this.json.getData('assets/json/landing.json').subscribe(result => {
       for(let country in result) {
+        this.countries.push(result[country].name);
         for(let tour in result[country].tours) {
           if(result[country].tours[tour].id === tourid) {
             this.tour = result[country].tours[tour];
-            console.log(this.tour);
+            //  grab all related tours
+            this.relatedTours = result[country].tours.filter((tour: Tour) => tour.id !== this.tour.id);
           }
         }
       }

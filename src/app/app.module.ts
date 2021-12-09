@@ -26,7 +26,7 @@ import { JsonService } from "./json.service";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //landing imports
-import {CarouselModule} from "ngx-bootstrap/carousel";
+import { CarouselModule } from "ngx-bootstrap/carousel";
 
 //browse imports
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
@@ -55,7 +55,7 @@ import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
     FontAwesomeModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     CurrencyPipe,
