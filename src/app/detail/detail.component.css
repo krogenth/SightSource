@@ -8,22 +8,31 @@
 
 .detail-tour-img-content {
     float: left;
+    max-width: 500px;
 }
 
 .detail-tour-img {
     height: 500px;
     width: 500px;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
 }
 
 .detail-tour-related {
+    width: 200px;
+    height: 250px;
     position: relative;
+    display: inline-block !important;
+    margin: 1% 5% 1% 5%;
 }
 
 .detail-tour-related-card {
     width: 200px;
     height: 250px;
-    margin: 1% 1% 1% 1%;
+}
+
+.detail-tour-related-card-img {
+    width: 200px;
+    height: 200px;
 }
 
 .detail-tour-related-location {

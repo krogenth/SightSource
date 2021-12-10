@@ -3,9 +3,9 @@
         <div class="detail-tour-img-content">
             <img class="detail-tour-img" src={{tour.thumbnail}}/>
             <br>
-            <div class="detail-tour-related">
-                <mat-card class="detail-tour-related-card" *ngFor="let relatedTour of relatedTours">
-                    <img mat-card-image src="relatedTour.thumbnail" />
+            <div *ngFor="let relatedTour of relatedTours" class="detail-tour-related">
+                <mat-card (click)="changeTour(relatedTour.id);" class="detail-tour-related-card">
+                    <img mat-card-image src="{{relatedTour.thumbnail}}" class="detail-tour-related-card-img"/>
                     <mat-card-content>
                         <div class="detail-tour-related-location">
                             {{ countries[relatedTour.countryId - 1] }}
@@ -27,12 +27,12 @@
             
             <div class="detail-tour-option-bar">
                 <input class="detail-tour-option-date"
-                        placeholder="datepicker"
-                        type="text"
-                        bsDatepicker
-                        [bsConfig]="{ isAnimated: true }"
-                        [(ngModel)]="date"
-                        (ngModelChange)="setTourDate($event)"
+                    placeholder="datepicker"
+                    type="text"
+                    bsDatepicker
+                    [bsConfig]="{ isAnimated: true }"
+                    [(ngModel)]="date"
+                    (ngModelChange)="setTourDate($event)"
                 >
 
                 <div class="detail-tour-option-price">

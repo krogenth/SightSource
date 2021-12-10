@@ -1,53 +1,41 @@
-<style>
 
-.card-horizontal {
-  display: flex;
-  flex: 1 1 auto;
-}
-.thumbnail{
-        width: 23rem; 
-        min-height: 425px;
-        
-    }
-    .tour-card{
-       
-        width: 57rem; 
-        margin-bottom:15%;
-
-    }
- 
-
-</style>
-<div style="width: 80%; height: 90%; margin:auto auto;"></div>
+<div style="width: 80%; height: 90%; margin:auto auto;">
+</div>
 
 
 <div class="btn-group" dropdown [insideClick]="true">
-    <button id="button-nested" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-    aria-controls="dropdown-nested">
-Filter <span class="caret"></span>
-</button>
-<ul id="dropdown-nested" *dropdownMenu class="dropdown-menu"
-role="menu" aria-labelledby="button-nested">
-
-   <li role="menuitem" dropdown triggers="mouseover" placement="bottom right" container="
-   body">
-   <a dropdownToggle class="dropdown-item dropdown-toggle"
-   (click)="false">Country<span class="caret"></span></a>
-    <ul *dropdownMenu  class="list-group" role="menu">
-      <li  role="menuitem" class="list-group-item">
-        <input  class="dropdown-item" type="checkbox" [(ngModel)]="allSelected" name="list_name" value="m1"
-          (change)="checkOrUncheckAll()" /> <strong>All</strong>
-      </li>
-      <li role="menuitem" class="list-group-item " *ngFor="let item of items" >
-        <input  class="dropdown-item" type="checkbox" [(ngModel)]="item.selected"  value="{{item.id}}"
-          (change)="areAllSelected()" />
-        {{item.value}}
-      </li>
+    <button 
+        id="button-nested"
+        dropdownToggle type="button"
+        class="btn btn-primary dropdown-toggle"
+        aria-controls="dropdown-nested">
+        Filter
+        <span class="caret"></span>
+    </button>
+    <ul 
+        id="dropdown-nested"
+        *dropdownMenu
+        class="dropdown-menu"
+        role="menu"
+        aria-labelledby="button-nested">
+        <li role="menuitem" dropdown triggers="mouseover" placement="bottom right" container="body">
+            <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Country
+                <span class="caret"></span>
+            </a>
+            <ul *dropdownMenu  class="list-group" role="menu">
+                <li  role="menuitem" class="list-group-item">
+                    <input  class="dropdown-item" type="checkbox" [(ngModel)]="allSelected" name="list_name" value="m1" (change)="checkOrUncheckAll()" />
+                    <strong>
+                        All
+                    </strong>
+                </li>
+                <li role="menuitem" class="list-group-item " *ngFor="let item of items" >
+                    <input  class="dropdown-item" type="checkbox" [(ngModel)]="item.selected"  value="{{item.id}}" (change)="areAllSelected()" />
+                    {{item.value}}
+                </li>
+            </ul>
+        </li>
     </ul>
-</li>
-
-
-</ul>
 </div>
 
 

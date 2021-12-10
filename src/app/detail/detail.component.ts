@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { JsonService } from "../json.service";
 
@@ -18,9 +18,13 @@ export class DetailComponent implements OnInit {
   relatedTours: Tour[] = [] as Tour[];
   date: Date = new Date();
 
-  constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {}
+  constructor(private json: JsonService, private readonly router: Router, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {}
 
   ngOnInit(): void {
+    this.loadTour();
+  }
+
+  loadTour(): void {
     let tourid = this.actRoute.snapshot.params.tourid;
     this.json.getData('assets/json/landing.json').subscribe(result => {
       for(let country in result) {
@@ -34,6 +38,13 @@ export class DetailComponent implements OnInit {
         }
       }
     });
+  }
+
+  changeTour(id: number): void {
+    if (!!id) {
+      this.router.navigate(['../../detail', id]);
+    }
+    this.loadTour();
   }
 
   getFormattedPrice(price: number) {

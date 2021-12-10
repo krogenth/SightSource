@@ -38,6 +38,18 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ]
+        },
+        {
+            "id": "24",
+            "countryId":"1",
+            "tour": "Placeholder America -3",
+            "description": "Placeholder America 4",
+            "price": "4",
+            "duration": "4 day",
+            "thumbnail": "assets/images/placeholder.jpg",
+            "images": [
+                "assets/images/placeholder.jpg"
+            ]
         }],
         "thumbnail": "assets/images/us.jpg"
     },
