@@ -24,10 +24,14 @@ export class BrowseComponent implements OnInit {
   items:any=[];
   allSelected:boolean;
   checked:any;
+  min:any;
+  max:any;
   
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {
     this.allSelected = true;
+    this.min=0;
+    this.max=99999;
 
     json.getData('assets/json/landing.json').subscribe(result => {
       
@@ -77,7 +81,7 @@ export class BrowseComponent implements OnInit {
     for (let i in this.items) {
       if(this.items[i].selected){
         this.checked.push(this.items[i]);
-        this.allTours.filter(tour=>tour.countryId==this.items[i].id).forEach(element => {
+        this.allTours.filter(tour=>tour.countryId==this.items[i].id && tour.price>=this.min&&tour.price<=this.max).forEach(element => {
           this.tours.push(element);
         });
       }

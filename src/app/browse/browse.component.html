@@ -18,7 +18,7 @@
         class="dropdown-menu"
         role="menu"
         aria-labelledby="button-nested">
-        <li role="menuitem" dropdown triggers="mouseover" placement="bottom right" container="body">
+        <li role="menuitem" dropdown triggers="onclick" placement="bottom right" container="body">
             <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Country
                 <span class="caret"></span>
             </a>
@@ -33,6 +33,22 @@
                     <input  class="dropdown-item" type="checkbox" [(ngModel)]="item.selected"  value="{{item.id}}" (change)="areAllSelected()" />
                     {{item.value}}
                 </li>
+            </ul>
+        </li>
+
+        <li role="menuitem" dropdown triggers="onclick" placement="bottom right" container="body">
+            <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Price:
+                <span class="caret"></span>
+            </a>
+            <ul *dropdownMenu  role="menu" class="list-group">
+                <div class="container">
+                <li  role="menuitem" >
+                    Min <input type="number" class="list-group-item min" min="0" max="99999" [(ngModel)]="this.min" value="{{this.min}}" (change)="getCheckedItems()">
+                    </li>
+                <li  role="menuitem" >
+                    Max <input type="number" class="list-group-item max" min="0" max="99999" [(ngModel)]="this.max" value="{{this.max}}" (change)="getCheckedItems()">
+                        </li>
+                    </div>
             </ul>
         </li>
     </ul>
