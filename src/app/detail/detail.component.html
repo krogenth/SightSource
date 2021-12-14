@@ -1,7 +1,12 @@
 <ng-container *ngIf="tour">
     <div class="detail-body">
         <div class="detail-tour-img-content">
-            <img class="detail-tour-img" src={{tour.thumbnail}}/>
+            <carousel [showIndicators]="showIndicators" class="detail-tour-img">
+                <slide *ngFor="let slide of tour.images">
+                    <img [src]="slide" alt="image slide" class="detail-tour-img"/>
+                </slide>
+            </carousel>
+
             <br>
             <div *ngFor="let relatedTour of relatedTours" class="detail-tour-related">
                 <mat-card (click)="changeTour(relatedTour.id);" class="detail-tour-related-card">

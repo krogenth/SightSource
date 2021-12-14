@@ -18,14 +18,14 @@ import {Tour} from "../types/tour";
   styleUrls: ['./browse.component.css']
 })
 export class BrowseComponent implements OnInit {
-  tours: Tour[] = [];
-  allTours: Tour[] = [];
-  countries: Country[] = [];
-  items:any=[];
-  allSelected:boolean;
-  checked:any;
-  min:any;
-  max:any;
+  tours: Tour[] = [] as Tour[];
+  allTours: Tour[] = [] as Tour[];
+  countries: Country[] = [] as Country[];
+  items: any = [] as any[];
+  allSelected: boolean;
+  checked: any;
+  min: any;
+  max: any;
   
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {
@@ -34,35 +34,28 @@ export class BrowseComponent implements OnInit {
     this.max=99999;
 
     json.getData('assets/json/landing.json').subscribe(result => {
-      
-
-      if(this.actRoute.snapshot.params.countryid){
+      let countrId = this.getQueryParams();
+      if(parseInt(countrId, 10) >= 0) {
         this.allSelected = false;
-
         for(let i in result){
-          
-            this.items.push(
-              {id:result[i].id,
-              value: result[i].name,
-              selected:result[i].id===this.actRoute.snapshot.params.countryid?true:false}
-            );
-              
-            for(let j in result[i].tours){
+            this.items.push({
+                id: result[i].id,
+                value: result[i].name,
+                selected: (result[i].id === countrId) ? true : false
+              });
+            
+            for(let j in result[i].tours) {
               this.allTours.push(result[i].tours[j]);
             }
-            
         }
-        
-      }
-      else
-      {
+      } else {
         for(let i in result){
           this.items.push({
-              id:result[i].id,
+              id: result[i].id,
               value: result[i].name,
-              selected:true
+              selected: true
             });
-          for(let j in result[i].tours){
+          for(let j in result[i].tours) {
             this.allTours.push(result[i].tours[j]);
           }
         }
@@ -71,39 +64,47 @@ export class BrowseComponent implements OnInit {
     });
   }
 
-  getFormattedPrice(price: number) {
+  getQueryParams(): string {
+    return (this.actRoute.snapshot.queryParamMap.get("countryid") || "-1");
+  }
+
+  ngOnInit(): void {
+  }
+
+  getFormattedPrice(price: number): string | null {
     return this.currencyPipe.transform(price, '$');
   }
 
-  getCheckedItems(){
+  getCheckedItems(): void {
     this.checked = [];
     this.tours=[];
     for (let i in this.items) {
-      if(this.items[i].selected){
+      if(this.items[i].selected) {
         this.checked.push(this.items[i]);
-        this.allTours.filter(tour=>tour.countryId==this.items[i].id && tour.price>=this.min&&tour.price<=this.max).forEach(element => {
-          this.tours.push(element);
-        });
+        this.allTours.filter(tour=>
+            tour.countryId == this.items[i].id &&
+            tour.price >= this.min &&
+            tour.price <= this.max
+          ).forEach(element => {
+            this.tours.push(element);
+          });
       }
     }
     this.checked = JSON.stringify(this.checked);
   }
 
-  checkOrUncheckAll() {
+  checkOrUncheckAll(): void {
     for (let i in this.items) {
       this.items[i].selected = this.allSelected;
     }
     this.getCheckedItems();
   }
 
-  areAllSelected() {
+  areAllSelected(): void {
     this.allSelected = this.items.every(function(item:any) {
         return item.selected == true;
       })
     this.getCheckedItems();
-  }
-
-  ngOnInit(): void {
   }
 
 }

@@ -28,6 +28,7 @@
 .detail-tour-related-card {
     width: 200px;
     height: 250px;
+    cursor: pointer;
 }
 
 .detail-tour-related-card-img {

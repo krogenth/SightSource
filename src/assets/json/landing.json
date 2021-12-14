@@ -48,7 +48,8 @@
             "duration": "4 day",
             "thumbnail": "assets/images/placeholder.jpg",
             "images": [
-                "assets/images/placeholder.jpg"
+                "./assets/images/cali.jpg",
+                "./assets/images/alaska.jpg"
             ]
         }],
         "thumbnail": "assets/images/us.jpg"

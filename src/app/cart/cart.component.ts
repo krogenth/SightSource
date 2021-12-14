@@ -11,7 +11,7 @@ import { Item } from "../types/cart-item";
 })
 export class CartComponent implements OnInit {
 
-  items: Item[] = [];
+  items: Item[] = [] as Item[];
 
   constructor(private json: JsonService, private currencyPipe: CurrencyPipe) {
     this.items = localStorage.cart ? JSON.parse(localStorage.cart) as Item[] : [] as Item[];

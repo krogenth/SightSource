@@ -17,6 +17,7 @@ export class DetailComponent implements OnInit {
   tour: Tour = {} as Tour;
   relatedTours: Tour[] = [] as Tour[];
   date: Date = new Date();
+  showIndicators: boolean = true;
 
   constructor(private json: JsonService, private readonly router: Router, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {}
 

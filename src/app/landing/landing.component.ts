@@ -12,21 +12,20 @@ import { Country } from "../types/country";
  ],
   styleUrls: ['./landing.component.css']
 })
+
 export class LandingComponent implements OnInit {
+  
   countries: Country[] = [];
+  slide = ['./assets/images/cali.jpg', './assets/images/alaska.jpg'];
+  map: string = './assets/images/map.png';
+  showIndicators: boolean = true;
 
   constructor(private json: JsonService) {
     json.getData('assets/json/landing.json').subscribe(result => {
       this.countries = result;
-    })
+    });
   }
-
-
-  slide=[{image: './assets/images/cali.jpg',text:'First'},
-  {image: './assets/images/alaska.jpg',text:'Second'}];
-
-  map='./assets/images/map.png';
-  showIndicators=true;
+  
   getItems(): Country[] {
     return this.countries;
   }

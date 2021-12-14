@@ -5,18 +5,16 @@
                 <h2 style="text-align: center;">
                     See the world, discover yourself
                 </h2>
-                <img [src]="slide.image" alt="image slide" class=" advert-img img-responsive center-block img-fluid" style="display: block; width: 100%;" />
-                    <h6>
-                        {{slide.text}}
-                    </h6>
+                <img [src]="slide" alt="image slide" class=" advert-img img-responsive center-block img-fluid" style="display: block; width: 100%;" />
             </slide>
         </carousel>
     </div>
 </div>
-<h3 style="text-align:center;"> 
+<br>
+<h3 style="text-align:center;">
     Find your next adventure here!
 </h3>
-<h4 style="text-align:center;"> 
+<h4 style="text-align:center;">
     Click one of the tours above or a location in the map below to get started.
 </h4>
 
@@ -35,7 +33,7 @@
                         {{country.description}}
                     </p>
                 </div>
-                <a href="#" class="btn btn-primary " [routerLink]="['../browse', country.id]">
+                <a href="#" class="btn btn-primary " [routerLink]="['../browse']" [queryParams]="{countryid: country.id}">
                     Learn More!
                 </a>
             </div>

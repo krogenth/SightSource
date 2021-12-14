@@ -6,4 +6,5 @@ export interface Tour {
     price: number
     duration: string
     thumbnail: string
+    images: string[]
 }
