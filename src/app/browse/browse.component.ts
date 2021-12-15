@@ -26,6 +26,7 @@ export class BrowseComponent implements OnInit {
   checked: any;
   min: any;
   max: any;
+  searchVal:string='';
   
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {
@@ -34,7 +35,7 @@ export class BrowseComponent implements OnInit {
     this.max=99999;
 
     json.getData('assets/json/landing.json').subscribe(result => {
-      let countrId = this.getQueryParams();
+      let countrId = this.getQueryParams("countryId");
       if(parseInt(countrId, 10) >= 0) {
         this.allSelected = false;
         for(let i in result){
@@ -64,8 +65,8 @@ export class BrowseComponent implements OnInit {
     });
   }
 
-  getQueryParams(): string {
-    return (this.actRoute.snapshot.queryParamMap.get("countryid") || "-1");
+  getQueryParams(paramName:string): string {
+    return (this.actRoute.snapshot.queryParamMap.get(paramName) || "-1");
   }
 
   ngOnInit(): void {
@@ -76,15 +77,21 @@ export class BrowseComponent implements OnInit {
   }
 
   getCheckedItems(): void {
+    console.log(this.getQueryParams("searchVal"));
     this.checked = [];
     this.tours=[];
+    let countrySearched=true;
     for (let i in this.items) {
       if(this.items[i].selected) {
+        this.getQueryParams("searchVal")==="-1"? countrySearched=true:countrySearched=(this.items[i].value.search(RegExp("("+this.getQueryParams("searchVal")+")+"))!=-1);
         this.checked.push(this.items[i]);
         this.allTours.filter(tour=>
             tour.countryId == this.items[i].id &&
             tour.price >= this.min &&
-            tour.price <= this.max
+            tour.price <= this.max &&
+            ((this.getQueryParams("searchVal")==="-1"?
+            true:(tour.tour.search(RegExp("("+this.getQueryParams("searchVal")+")+"))!=-1 ))||countrySearched)
+
           ).forEach(element => {
             this.tours.push(element);
           });
@@ -106,5 +113,4 @@ export class BrowseComponent implements OnInit {
       })
     this.getCheckedItems();
   }
-
 }

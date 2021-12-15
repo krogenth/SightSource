@@ -10,5 +10,6 @@ export class AppComponent {
   title = 'SightSource';
   faSearch=faSearch;
   faShoppingCart=faShoppingCart;
+  search: string="";
   
 }

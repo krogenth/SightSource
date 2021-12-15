@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'cart', component: CartComponent},
   {path:'browse/:countryid', component: BrowseComponent},
+  {path:'browse/:searchVal', component: BrowseComponent},
   {path:'browse', component: BrowseComponent},
   {path:'detail/:tourid', component: DetailComponent},
 ];

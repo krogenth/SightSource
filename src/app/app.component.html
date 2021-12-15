@@ -25,11 +25,13 @@
         <div class="col-sm-4">
             <div class="input-group-append">
                 <div class="form-outline">
-                    <input class="form-control" type="search" placeholder="search">
+                    <input class="form-control" type="search" placeholder="search" id="search" [(ngModel)]="this.search">
                 </div>
                 <span class="input-group-append pull-right">
                     <button class="btn btn-default btn-xs pull-right" type="button">
-                        <fa-icon [icon]="faSearch"></fa-icon>
+                        <a [routerLink]="['browse']" [queryParams]="{searchVal: this.search}">
+                            <fa-icon [icon]="faSearch"></fa-icon>
+                        </a>
                     </button>
                 </span>
                 <button class="btn btn-default pull-right" type="button" style="margin-left:3%">
