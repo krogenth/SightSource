@@ -8,7 +8,7 @@ import { Country } from "../types/country";
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   providers: [
-    { provide: CarouselConfig, useValue: { interval: 1500, noPause: false, showIndicators: true } }
+    { provide: CarouselConfig, useValue: { interval: 6000, noPause: true, showIndicators: true } }
  ],
   styleUrls: ['./landing.component.css']
 })
@@ -16,13 +16,19 @@ import { Country } from "../types/country";
 export class LandingComponent implements OnInit {
   
   countries: Country[] = [];
-  slide = ['./assets/images/cali.jpg', './assets/images/alaska.jpg'];
-  map: string = './assets/images/map.png';
+  slides: any=[] as any[];
   showIndicators: boolean = true;
 
   constructor(private json: JsonService) {
     json.getData('assets/json/landing.json').subscribe(result => {
       this.countries = result;
+      for(let i in result){
+        for(let j in result[i].tours) {
+          if(result[i].tours[j].popular){
+          this.slides.push(result[i].tours[j]);
+          }
+        }
+      }
     });
   }
   

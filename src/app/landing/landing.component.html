@@ -1,11 +1,14 @@
 <div >
     <div style="width: 80%; height: 90%; margin:auto auto;">
         <carousel [showIndicators]="showIndicators" style="margin:auto auto;">
-            <slide *ngFor="let slide of slide; let index=index" class="mx-auto">
+            <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
                 <h2 style="text-align: center;">
                     See the world, discover yourself
                 </h2>
-                <img [src]="slide" alt="image slide" class=" advert-img img-responsive center-block img-fluid" style="display: block; width: 100%;" />
+                <a [routerLink]="['../detail', slide.id]">
+                <img [src]="slide.thumbnail" alt="image slide" class=" advert-img img-responsive center-block img-fluid" style="display: block; width: 100%;" />
+                </a>
+                <h4>{{slide.tour}}</h4>
             </slide>
         </carousel>
     </div>

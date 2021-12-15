@@ -7,4 +7,5 @@ export interface Tour {
     duration: string
     thumbnail: string
     images: string[]
+    popular:boolean
 }
