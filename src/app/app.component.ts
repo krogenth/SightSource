@@ -8,8 +8,8 @@ import {faSearch, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'SightSource';
-  faSearch=faSearch;
-  faShoppingCart=faShoppingCart;
-  search: string="";
+  faSearch = faSearch;
+  faShoppingCart = faShoppingCart;
+  search: string = "";
   
 }

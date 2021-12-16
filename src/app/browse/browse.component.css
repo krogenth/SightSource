@@ -6,17 +6,17 @@
 
 .browse-tour-container {
     position: relative;
-    margin: 25px auto;
-    max-width: 80%;
+    margin: 16px auto;
+    padding-left: 2.5%;
+    max-width: 100%;
     min-width: 600px;
     overflow-y: hidden;
-    display: grid;
 }
 
 .browse-tour-card {
     margin: 16px 16px 16px 16px;
-    min-width: 800px;
-    max-width: 800px;
+    min-width: 750px;
+    max-width: 750px;
     min-height: 330px;
     position: relative;
 }
@@ -34,7 +34,7 @@
 
 .browse-tour-card-info {
     margin: 0 16px;
-    width: 50%;
+    width: 46%;
     display: inline-block;
 }
 
@@ -53,46 +53,14 @@
 
 .browse-tour-card-actions {
     margin: 16px 16px;
-    width: 50%;
+    width: 46%;
     display: inline-block;
 }
 
-
-
-
-
-
-
-.country-card-title {
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
-
+.browse-tour-card-learn {
+    float: left;
 }
 
-.country-card-description {
-    text-align: center;
-    font-size: small;
-}
-
-.country-card {
-    margin-bottom:50px; 
-    width: 18rem; 
-    min-height: 425px;
-    margin-left:90px;
-}
-
-.card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
-}
-  
-.thumbnail {
-    width: 23rem; 
-    min-height: 425px;
-}
-  
-.tour-card {
-    width: 57rem; 
-    margin-bottom:15%;
+.browse-tour-card-add {
+    float: right;
 }

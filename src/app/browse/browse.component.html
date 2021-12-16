@@ -82,8 +82,13 @@
                 </mat-card-content>
 
                 <mat-card-actions class="browse-tour-card-actions" valign="bottom">
-                    <button mat-button class="btn btn-primary" [routerLink]="['../detail', tour.id]">
+                    <button mat-button class="btn btn-primary browse-tour-card-learn" [routerLink]="['../detail', tour.id]">
                         Learn More!
+                    </button>
+                    <button class="btn btn-default browse-tour-card-add">
+                        <a [routerLink]="['../cart']" (click)="addTourToCart(tour);">
+                            <fa-icon [icon]="faShoppingCart"></fa-icon>
+                        </a>
                     </button>
                 </mat-card-actions>
             </mat-card>

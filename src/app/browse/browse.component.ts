@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { ActivatedRoute } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 import { JsonService } from "../json.service";
 
@@ -26,7 +27,8 @@ export class BrowseComponent implements OnInit {
   checked: any;
   min: any;
   max: any;
-  searchVal:string='';
+  searchVal: string = '';
+  faShoppingCart = faShoppingCart
   
 
   constructor(private json: JsonService, private actRoute: ActivatedRoute, private currencyPipe: CurrencyPipe) {
@@ -112,5 +114,18 @@ export class BrowseComponent implements OnInit {
         return item.selected == true;
       })
     this.getCheckedItems();
+  }
+
+  addTourToCart(tour: Tour): void {
+    let cart = localStorage.cart ? JSON.parse(localStorage.cart) as any[] : [] as any[];
+    if(!cart.find(element => element.id === tour.id)) {
+      cart.push(tour);
+    }
+    cart.forEach(elem => {
+      if (elem === tour) {
+        elem.date = new Date();
+      }
+    });
+    localStorage.cart = JSON.stringify(cart);
   }
 }
