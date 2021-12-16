@@ -8,11 +8,20 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //  ngx-bootstrap imports
 import { AlertModule } from "ngx-bootstrap/alert";
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+//landing imports
+import { CarouselModule } from "ngx-bootstrap/carousel";
+
+//browse imports
+import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
 
 //  app specific imports
 import { AppRoutingModule } from './app-routing.module';
@@ -22,14 +31,6 @@ import { BrowseComponent } from './browse/browse.component';
 import { DetailComponent } from './detail/detail.component';
 import { CartComponent } from './cart/cart.component';
 import { JsonService } from "./json.service";
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-//landing imports
-import { CarouselModule } from "ngx-bootstrap/carousel";
-
-//browse imports
-import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
   ],
   providers: [
     CurrencyPipe,

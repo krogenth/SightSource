@@ -54,51 +54,39 @@
     </ul>
 </div>
 
+<div class="browse-tour-container">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div *ngFor="let tour of tours; let i = index">
+            <mat-card class="browse-tour-card">
+                <img class="browse-tour-card-img" src="{{tour.thumbnail}}"/>
 
-<div class="row" style="margin-top:20px;">
-    <div *ngFor="let tour of tours; let i = index">
-        <div class="clearfix" *ngIf="i % 4 ==0"></div>
-        <div class="col-md-6">
-            <div class="card tour-card flex-row flex-wrap">
-                <div class="card-horizontal">
-                    <img class="thumbnail" src={{tour.thumbnail}} />
-                    <div class="container">
-                        <div class="row-lg-12 no-gutters">
-                            <div class="card-body">
-                                <div class="col">
-                                    <h3 class="card-title tour-card-title">
-                                        <b>Title:</b> {{tour.tour}}
-                                    </h3>
-                                </div>
-        
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3 class="card-text">
-                                            <b>Price:</b> {{getFormattedPrice(tour.price)}}
-                                        </h3>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3 class="card-text">
-                                            <b>Duration:</b> {{tour.duration}}
-                                        </h3>
-                                    </div>    
-                                </div>
-                            </div>
-                            <p class="card-text tour-card-description">
-                                <b>Description:</b>{{tour.description}}
-                            </p>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-lg-6">
-                            <a href="#" class="btn btn-primary " [routerLink]="['../detail', tour.id]">
-                            Learn More!
-                        </a></div>
-                        </div>
+                <mat-card-header class="browse-tour-card-header">
+                    <mat-card-title>
+                        <h3>
+                            {{tour.tour}}
+                        </h3>
+                    </mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content class="browse-tour-card-info">
+                    <div class="browse-tour-card-price">
+                        <b>Price:</b> {{getFormattedPrice(tour.price)}}
                     </div>
-                </div>
-            </div>
+                    <div class="browse-tour-card-duration">
+                        <b>Duration:</b> {{tour.duration}}
+                    </div>
+
+                    <div class="browse-tour-card-description">
+                        {{tour.description}}
+                    </div>
+                </mat-card-content>
+
+                <mat-card-actions class="browse-tour-card-actions" valign="bottom">
+                    <button mat-button class="btn btn-primary" [routerLink]="['../detail', tour.id]">
+                        Learn More!
+                    </button>
+                </mat-card-actions>
+            </mat-card>
         </div>
     </div>
 </div>

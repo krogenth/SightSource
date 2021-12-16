@@ -38,10 +38,12 @@
 
 .detail-tour-related-location {
     float: left;
+    font-size: 12px;
 }
 
 .detail-tour-related-price {
     float: right;
+    font-size: 12px;
 }
 
 .detail-tour-contents {
