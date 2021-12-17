@@ -14,7 +14,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "1",
@@ -27,7 +28,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "2",
@@ -40,7 +42,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         },
         {
             "id": "24",
@@ -54,7 +57,8 @@
                 "./assets/images/cali.jpg",
                 "./assets/images/alaska.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "4"
         },
         {
             "id": "25",
@@ -67,7 +71,8 @@
             "images": [
                 "./assets/images/alaska.jpg"
             ],
-            "popular":true
+            "popular":true,
+            "dayNum": "3"
         },
         {
             "id": "26",
@@ -80,7 +85,8 @@
             "images": [
                 "./assets/images/cali.jpg"
             ],
-            "popular":true
+            "popular":true,
+            "dayNum": "2"
         }],
         "thumbnail": "assets/images/us.jpg"
     },
@@ -99,7 +105,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "4",
@@ -112,7 +119,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "5",
@@ -125,7 +133,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/canada.jpg"
     },
@@ -144,7 +153,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "7",
@@ -157,7 +167,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "8",
@@ -170,7 +181,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/bahamas.jpg"
     }, 
@@ -189,7 +201,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "10",
@@ -202,7 +215,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "11",
@@ -215,7 +229,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/aus.jpg"
     },
@@ -234,7 +249,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "13",
@@ -247,7 +263,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "14",
@@ -260,7 +277,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/newZealand.jpg"
     },
@@ -279,7 +297,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "16",
@@ -292,7 +311,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "17",
@@ -305,7 +325,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/japan.jpg"
     },
@@ -324,7 +345,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "19",
@@ -337,7 +359,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "20",
@@ -350,7 +373,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/france.jpg"
     },
@@ -369,7 +393,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "1"
         },
         {
             "id": "22",
@@ -382,7 +407,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "2"
         },
         {
             "id": "23",
@@ -395,7 +421,8 @@
             "images": [
                 "assets/images/placeholder.jpg"
             ],
-            "popular":false
+            "popular":false,
+            "dayNum": "3"
         }],
         "thumbnail": "assets/images/italy.jpg"
     }

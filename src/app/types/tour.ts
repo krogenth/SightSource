@@ -8,4 +8,5 @@ export interface Tour {
     thumbnail: string
     images: string[]
     popular:boolean
+    dayNum:number
 }

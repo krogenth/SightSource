@@ -11,5 +11,6 @@ export class AppComponent {
   faSearch = faSearch;
   faShoppingCart = faShoppingCart;
   search: string = "";
+
   
 }

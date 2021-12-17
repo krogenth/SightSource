@@ -27,6 +27,8 @@ export class BrowseComponent implements OnInit {
   checked: any;
   min: any;
   max: any;
+  minDay:any;
+  maxDay:any;
   searchVal: string = '';
   faShoppingCart = faShoppingCart
   
@@ -35,6 +37,8 @@ export class BrowseComponent implements OnInit {
     this.allSelected = true;
     this.min=0;
     this.max=99999;
+    this.minDay=0;
+    this.maxDay=20;
 
     json.getData('assets/json/landing.json').subscribe(result => {
       let countryId = this.getQueryParams("countryid");
@@ -95,6 +99,8 @@ export class BrowseComponent implements OnInit {
             tour.countryId == this.items[i].id &&
             tour.price >= this.min &&
             tour.price <= this.max &&
+            tour.dayNum>=this.minDay&&
+            tour.dayNum<=this.maxDay&&
             ((this.getQueryParams("searchVal")==="-1"?
             true:(tour.tour.toLowerCase().search(RegExp("("+this.getQueryParams("searchVal").toLowerCase()+")+"))!=-1 ))||countrySearched ||
             tour.description.toLowerCase().search(RegExp("("+this.getQueryParams("searchVal").toLowerCase()+")+"))!=-1 )
