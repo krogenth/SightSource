@@ -51,16 +51,16 @@
                     </div>
             </ul>
         </li>
-        <li role="menuitem" dropdown triggers="onclick" placement="bottom right" container="body">
+        <li role="menuitem" dropdown triggers="onclick" placement="bottom left" container="body">
             <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Duration:
                 <span class="caret"></span>
             </a>
             <ul *dropdownMenu  role="menu" class="list-group">
                 <div class="container">
-                <li  role="menuitem" >
+                <li  role="menuitem" class="list-group-item">
                     Min <input type="number" class="list-group-item min" min="0" max="20" [(ngModel)]="this.minDay" value="{{this.minDay}}" (change)="getCheckedItems()">
                     </li>
-                <li  role="menuitem" >
+                <li  role="menuitem" class="list-group-item">
                     Max <input type="number" class="list-group-item max" min="0" max="20" [(ngModel)]="this.maxDay" value="{{this.maxDay}}" (change)="getCheckedItems()">
                         </li>
                     </div>
