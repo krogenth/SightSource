@@ -88,14 +88,16 @@ export class BrowseComponent implements OnInit {
     let countrySearched=true;
     for (let i in this.items) {
       if(this.items[i].selected) {
-        this.getQueryParams("searchVal")==="-1"? countrySearched=true:countrySearched=(this.items[i].value.search(RegExp("("+this.getQueryParams("searchVal")+")+"))!=-1);
+        this.getQueryParams("searchVal")==="-1"? countrySearched=true:
+        countrySearched=(this.items[i].value.toLowerCase().search(RegExp("("+this.getQueryParams("searchVal").toLowerCase()+")+"))!=-1);
         this.checked.push(this.items[i]);
         this.allTours.filter(tour=>
             tour.countryId == this.items[i].id &&
             tour.price >= this.min &&
             tour.price <= this.max &&
             ((this.getQueryParams("searchVal")==="-1"?
-            true:(tour.tour.search(RegExp("("+this.getQueryParams("searchVal")+")+"))!=-1 ))||countrySearched)
+            true:(tour.tour.toLowerCase().search(RegExp("("+this.getQueryParams("searchVal").toLowerCase()+")+"))!=-1 ))||countrySearched ||
+            tour.description.toLowerCase().search(RegExp("("+this.getQueryParams("searchVal").toLowerCase()+")+"))!=-1 )
 
           ).forEach(element => {
             this.tours.push(element);

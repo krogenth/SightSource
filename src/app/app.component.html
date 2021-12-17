@@ -1,20 +1,20 @@
 <div class="container-fluid" style="padding-top: 80px;">
     <div class="navbar-sticky fixed-top" style="background-color:#996600;">
         <div class="row">
-            <h3 class="head-title">SightSource</h3>
+            <h1 class="head-title"><a [routerLink]="['']">SightSource</a></h1>
         </div>
         <div class="row">
             <div class="col-sm-1">
             </div>
         <div class="col-sm-1">
-            <button class="btn btn-toolbar" name="home">
+            <button class="btn btn-toolbar" name="home" id="homeBtn">
                 <a [routerLink]="['']">
                     Home
                 </a>
             </button>
         </div>
         <div class="col-sm-1">
-            <button class="btn btn-toolbar" name="browse">
+            <button class="btn btn-toolbar" name="browse" id="browseBtn">
                 <a [routerLink]="['browse']">
                     Browse
                 </a>
@@ -34,7 +34,7 @@
                         </a>
                     </button>
                 </span>
-                <button class="btn btn-default pull-right" type="button" style="margin-left:3%">
+                <button class="btn btn-default pull-right" type="button" style="margin-left:3%" id="cartBtn">
                     <a [routerLink]="['cart']">
                         <fa-icon [icon]="faShoppingCart"></fa-icon>
                     </a>
