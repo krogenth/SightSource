@@ -37,7 +37,7 @@ export class BrowseComponent implements OnInit {
     this.max=99999;
 
     json.getData('assets/json/landing.json').subscribe(result => {
-      let countrId = this.getQueryParams("countryId");
+      let countrId = this.getQueryParams("countryid");
       if(parseInt(countrId, 10) >= 0) {
         this.allSelected = false;
         for(let i in result){
@@ -72,6 +72,10 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  this.actRoute.queryParams.subscribe((params)=>{
+    params['searchVal']?this.searchVal=params['searchVal']:'';
+    this.getCheckedItems();
+  });
   }
 
   getFormattedPrice(price: number): string | null {
@@ -79,7 +83,6 @@ export class BrowseComponent implements OnInit {
   }
 
   getCheckedItems(): void {
-    console.log(this.getQueryParams("searchVal"));
     this.checked = [];
     this.tours=[];
     let countrySearched=true;
